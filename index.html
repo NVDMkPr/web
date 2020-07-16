@@ -2,10 +2,73 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Investments Site</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Invest Now!</h1>
+    <div id="container_head" class="box_for_container">
+      <div id="text_in_container_head">Infomation</div>
+    </div>
+    <div id="page_info" class="box_for_container">
+      <div id="page_url">
+        <span id="page_url_text">Site Url : </span>
+        <span id="link_url_site" onclick=redirect()>https://cryptob2b.cash/?ref=2231</span>
+      </div>
+      <div id="running_days">
+        <span id="text_running_days">Running Days : </span>
+        <span id="number_running_days">1</span>
+      </div>
+      <div id="auto_payment">Auto Payments In 24 Hour</div><br />
+      <div id="min_deposits">
+        <div id="table">
+          <span id="coin_img"></span>
+          <div id="num"></div>
+        </div>
+      </div>
+    </div>
+    <style>
+      body {
+        background-color: #1abf00;
+        padding: 0;
+        margin: 0;
+        font-family: 'Oswald', sans-serif;
+      }
+      .box_for_container {
+        background-color: #75f77e;
+        font-size: 18px;
+        padding: 12px;
+        margin: 10px;
+        border-radius: 5px;
+        border: #baffa8 solid;
+        color: #ff00a3;
+      }
+      #container_head {
+        text-align: center;
+        font-size: 24px;
+        border-radius: 10px;
+      }
+      #page_url {
+        border: #64e0ff solid;
+        border-radius: 7px;
+        font-size: 18px;
+        text-align: left;
+      }
+      #link_url_site {
+        margin-left: 10%;
+        color: #ff8976;
+      }
+      #link_url_site:hover {
+        color: #55c9e6;
+      }
+      #link_url_site:hover:active {
+        color: #ffe25a;
+      }
+    </style>
+    <script>
+      var getEle = document.getElementById('link_url_site');
+      function redirect () {
+        window.location.href = getEle.textContent
+      }
+    </script>
   </body>
 </html>
